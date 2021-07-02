@@ -1,9 +1,40 @@
 {
     "BGM":[
-        ["セツナトリップ - SPECIAL Lv.29","BIDx00001"],
-        ["六兆年と一夜物語 - SPECIAL Lv.29","BIDx00002"],
-        ["六兆年と一夜物語 - EXPERT Lv.29","BIDx00003"],
-        ["Hey-day狂騒曲 (カプリチオ) - EXPERT Lv.28","BIDx00004"],
-        ["SENSENFUKOKU - EXPERT Lv.28","BIDx00005"],
-        ["Re:birth day - EXPERT Lv.28","BIDx00006"]]
+        {
+            "name":"セツナトリップ - SPECIAL Lv.29",
+            "id":"BIDx00001",
+            "time":122,
+            "notes":1087
+        },
+        {
+            "name":"六兆年と一夜物語 - SPECIAL Lv.29",
+            "id":"BIDx00002",
+            "time":96,
+            "notes":935
+        },
+        {
+            "name":"六兆年と一夜物語 - EXPERT Lv.29",
+            "id":"BIDx00003",
+            "time":96,
+            "notes":895
+        },
+        {
+            "name":"Hey-day狂騒曲 (カプリチオ) - EXPERT Lv.28",
+            "id":"BIDx00004",
+            "time":106,
+            "notes":878
+        },
+        {
+            "name":"SENSENFUKOKU - EXPERT Lv.28",
+            "id":"BIDx00005",
+            "time":98,
+            "notes":851
+        },
+        {
+            "name":"Re:birth day - EXPERT Lv.28",
+            "id":"BIDx00006",
+            "time":120,
+            "notes":848
+        }
+    ]
 }
