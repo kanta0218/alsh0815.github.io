@@ -18,11 +18,22 @@ window.onload = function init() {
             var option = document.createElement("option");
             option.text = data.SKILL[i][0];
             option.value = data.SKILL[i][1];
-            select_skill1.appendChild(option);
-            select_skill2.appendChild(option);
-            select_skill3.appendChild(option);
-            select_skill4.appendChild(option);
-            select_skill5.appendChild(option);
+            var ii = 0;
+            while (ii<5) {
+                switch (ii) {
+                    case 0:
+                        select_skill1.appendChild(option);
+                    case 1:
+                        select_skill2.appendChild(option);
+                    case 2:
+                        select_skill3.appendChild(option);
+                    case 3:
+                        select_skill4.appendChild(option);
+                    case 4:
+                        select_skill5.appendChild(option);
+                }
+                ii++;
+            }
         }
         var select_skilltime1 = document.getElementById("input_skillTime1");
         var select_skilltime2 = document.getElementById("input_skillTime2");
