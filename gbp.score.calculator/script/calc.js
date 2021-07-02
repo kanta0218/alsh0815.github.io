@@ -31,6 +31,14 @@ function calc() {
                 if (1400<maxCombo) { comboCoe = 1.18; }
                 if (1500<maxCombo) { comboCoe = 1.19; }
                 $("#output_comboCoe").html(comboCoe);
+                var perfectNP = document.getElementById('input_perfectNotes').value / notes;
+                $("#output_perfectNP").html(perfectNP);
+                var greatNP = document.getElementById('input_greatNotes').value / notes;
+                $("#output_greatNP").html(greatNP);
+                var goodNP = document.getElementById('input_goodNotes').value / notes;
+                $("#output_goodNP").html(goodNP);
+                var judgeCoe = 1.1*perfectNP + 0.8*greatNP + 0.5*goodNP;
+                $("#output_judgeCoe").html(judgeCoe);
             }
         }
     });
