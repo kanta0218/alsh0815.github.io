@@ -1,7 +1,6 @@
 function calc() {
     var bgm = document.getElementById('input_bgm').value;
     $.getJSON('database/BGM.json', (data) => {
-        var select_bgm = document.getElementById("input_bgm");
         for (i=0; i<data.BGM.length; i++) {
             if (bgm==data.BGM[i].id) {
                 var level = data.BGM[i].level;
@@ -10,7 +9,7 @@ function calc() {
                 $("#output_diff").html(level);
                 $("#output_totalNotes").html(notes);
                 $("#output_diffCoe").html(diffCoe);
-                var maxCombo = $("#input_maxCombo").value();
+                var maxCombo = document.getElementById('input_maxCombo').value;
                 var comboCoe = 1;
                 if (20<maxCombo) { comboCoe = 1.01; }
                 if (50<maxCombo) { comboCoe = 1.02; }
