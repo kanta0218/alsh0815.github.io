@@ -4,43 +4,57 @@
             "name":"セツナトリップ - SPECIAL Lv.29",
             "id":"BIDx00001",
             "time":122,
-            "notes":1087
+            "notes":1087,
+            "level":29
         },
         {
             "name":"六兆年と一夜物語 - SPECIAL Lv.29",
             "id":"BIDx00002",
             "time":96,
-            "notes":935
+            "notes":935,
+            "level":29
         },
         {
             "name":"六兆年と一夜物語 - EXPERT Lv.29",
             "id":"BIDx00003",
             "time":96,
-            "notes":895
+            "notes":895,
+            "level":29
         },
         {
             "name":"Hey-day狂騒曲 (カプリチオ) - EXPERT Lv.28",
             "id":"BIDx00004",
             "time":106,
-            "notes":878
+            "notes":878,
+            "level":28
         },
         {
             "name":"SENSENFUKOKU - EXPERT Lv.28",
             "id":"BIDx00005",
             "time":98,
-            "notes":851
+            "notes":851,
+            "level":28
         },
         {
             "name":"Re:birth day - EXPERT Lv.28",
             "id":"BIDx00006",
             "time":120,
-            "notes":848
+            "notes":848,
+            "level":28
         },
         {
             "name":"Opera of the wasteland - EXPERT Lv.28",
             "id":"BIDx00007",
             "time":106,
-            "notes":696
+            "notes":696,
+            "level":28
+        },
+        {
+            "name":"Ringing Bloom - EXPERT Lv.28",
+            "id":"BIDx00008",
+            "time":117,
+            "notes":1094,
+            "level":28
         }
     ]
 }

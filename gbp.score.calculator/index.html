@@ -7,6 +7,7 @@
     <title>ガルパ スコア計算サイト</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script/onload.js"></script>
+    <script src="script/calc.js"></script>
 </head>
 
 <body>
@@ -25,13 +26,33 @@
 <tr><td>メンバー3</td><td colspan="2"><select id="input_skill3"></select></td><td><select id="input_skillTime3"></select></td></tr>
 <tr><td>メンバー4</td><td colspan="2"><select id="input_skill4"></select></td><td><select id="input_skillTime4"></select></td></tr>
 <tr><td>メンバー5</td><td colspan="2"><select id="input_skill5"></select></td><td><select id="input_skillTime5"></select></td></tr>
-<tr><td colspan="2"></td><td colspan="3"><button id="submit">計算</button></td></tr>
+<tr><td colspan="2"></td><td colspan="3"><button onclick="calc()">計算</button></td></tr>
 </table>
 </div>
 
 <hr size="1">
 
-<div>ver.0.0.2</div>
+<div>
+<table border="1">
+<tr><td colspan="2">最終スコア</td><td colspan="3"><span id="output_fScore"></span></td></tr>
+<tr><td colspan="2">AP時スコア</td><td colspan="3"><span id="output_apScore"></span></td></tr>
+<tr><td colspan="2">ベーススコア</td><td colspan="3"><span id="output_bScore"></span></td></tr>
+<tr><td colspan="2">難易度係数</td><td colspan="3"><span id="output_diffCoe"></span></td></tr>
+<tr><td colspan="2">難易度</td><td colspan="3"><span id="output_diff"></span></td></tr>
+<tr><td colspan="2">総ノーツ数</td><td colspan="3"><span id="output_totalNotes"></span></td></tr>
+<tr><td colspan="2">スキル発動時ノーツ数</td><td colspan="3"><span id="output_notesWS"></span></td></tr>
+<tr><td colspan="2">ノーツ/秒</td><td colspan="3"><span id="output_nps"></span></td></tr>
+<tr><td colspan="2">スコア/ノート</td><td colspan="3"><span id="output_spn"></span></td></tr>
+<tr><td colspan="2" rowspan="2">精度</td><td>Perfect率</td><td>Great率</td><td>Good率</td></tr>
+<tr><td><span id="output_perfectNP"></span></td><td><span id="output_greatNP"></span/></td><td><span id="output_goodNP"></span/></td></tr>
+<tr><td colspan="2">判定係数</td><td colspan="3"><span id="output_judgeCoe"></span></td></tr>
+<tr><td colspan="2">コンボ係数</td><td colspan="3"><span id="output_comboCoe"></span></td></tr>
+</table>
+</div>
+
+<hr size="1">
+
+<div>ver.0.0.5</div>
 
 </body>
 
