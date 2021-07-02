@@ -14,25 +14,13 @@ window.onload = function init() {
         var select_skill3 = document.getElementById("input_skill3");
         var select_skill4 = document.getElementById("input_skill4");
         var select_skill5 = document.getElementById("input_skill5");
+        var list1 = [select_skill1,select_skill2,select_skill3,select_skill4,select_skill5];
         for (i=0; i<data.SKILL.length; i++) {
             var option = document.createElement("option");
-            option.text = data.SKILL[i][0];
-            option.value = data.SKILL[i][1];
-            var ii = 0;
-            while (ii<5) {
-                switch (ii) {
-                    case 0:
-                        select_skill1.appendChild(option);
-                    case 1:
-                        select_skill2.appendChild(option);
-                    case 2:
-                        select_skill3.appendChild(option);
-                    case 3:
-                        select_skill4.appendChild(option);
-                    case 4:
-                        select_skill5.appendChild(option);
-                }
-                ii++;
+            for (ii=0; ii<list1.length; ii++) {
+                option.text = data.SKILL[i][0];
+                option.value = data.SKILL[i][1];
+                list1[ii].appendChild(option);
             }
         }
         var select_skilltime1 = document.getElementById("input_skillTime1");
