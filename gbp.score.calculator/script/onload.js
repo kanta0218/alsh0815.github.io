@@ -16,8 +16,8 @@ window.onload = function init() {
         var select_skill5 = document.getElementById("input_skill5");
         var list1 = [select_skill1,select_skill2,select_skill3,select_skill4,select_skill5];
         for (i=0; i<data.SKILL.length; i++) {
-            var option = document.createElement("option");
             for (ii=0; ii<list1.length; ii++) {
+                var option = document.createElement("option");
                 option.text = data.SKILL[i][0];
                 option.value = data.SKILL[i][1];
                 list1[ii].appendChild(option);
