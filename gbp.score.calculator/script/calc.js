@@ -80,6 +80,7 @@ function calc() {
                 var skillTime4 = getSkillTime(document.getElementById('input_skillTime4'));
                 var skillTime5 = getSkillTime(document.getElementById('input_skillTime5'));
                 var notesWS = notesPsec*(skillTime1+skillTime2+skillTime3+skillTime4+skillTime5+skillTime1);
+                $("output_notesWS").html(notesWS.toFixed(0));
                 var fScore = basicScore+(skillCoe1+skillCoe2+skillCoe3+skillCoe4+skillCoe5+skillCoe1)/6*notesWS*scorePnote*(judgeCoe/1.1);
                 $("#output_fScore").html(fScore.toFixed(0));
                 var apScore = maxBasicScore+(skillCoe1+skillCoe2+skillCoe3+skillCoe4+skillCoe5+skillCoe1)/6*notesWS*maxScorePnote*(1.1/1.1);
