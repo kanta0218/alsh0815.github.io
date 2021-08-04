@@ -1,0 +1,55 @@
+:root {
+  --bg: rgb(200, 200, 200);
+  --bar: rgb(125, 230, 255);
+}
+
+.slidebar-multithumb {
+  display: grid;
+  padding: 1rem;
+}
+
+.slidebar-multithumb input[type="range"] {
+  grid-column: 1;
+  grid-row: 2;
+  pointer-events: none;
+  /* レンジバーの背景を透明にする */
+  -webkit-appearance: none;
+  background: none;
+  /* わかりやすいのでボーダーつける */
+  border: 1px solid;
+  /* overflow: hiddenにすると溝に色を付けたとき、その部分が巨大化しない */
+  overflow: hidden;
+}
+
+.slidebar-multithumb ::-webkit-slider-thumb {
+  pointer-events: auto;
+  /* つまみ部分を長方形にする */
+  -webkit-appearance: none;
+  width: 0.8rem;
+  height: 1.5rem;
+}
+
+/* 最初のつまみを上にする(順番をわかりやすくするため) */
+.thumb-1 {
+  z-index: 1;
+}
+
+/* つまみの溝の背景。thumb-1をnoneにすることで後ろのthumb-2が表示される */
+.thumb-1::-webkit-slider-runnable-track {
+  background: none;
+}
+
+.thumb-2::-webkit-slider-runnable-track {
+  background: var(--bg);
+}
+
+/* それぞれのつまみの設定。box-shadowでつまみの左側を埋める色を設定できる。 */
+.thumb-1::-webkit-slider-thumb {
+  background: rgb(255, 100, 100);
+  box-shadow: -100vw 0 0 100vw var(--bg);
+}
+
+.thumb-2::-webkit-slider-thumb {
+  background: rgb(100, 100, 255);
+  box-shadow: -100vw 0 0 100vw var(--bar);
+}

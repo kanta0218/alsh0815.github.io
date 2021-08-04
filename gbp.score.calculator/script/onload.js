@@ -3,6 +3,13 @@ function sortBGM() {
   loadBGM(type);
 }
 
+function changeLV() {
+  var minLv = document.getElementById("range-1").value;
+  var maxLv = document.getElementById("range-2").value;
+  document.getElementById("input_rangeLV").innerHTML = 'Lv.'+minLv+' 〜 Lv.'+maxLv;
+  sortBGM();
+}
+
 window.onload = function init() {
     loadBGM('diff-down');
     $.getJSON('database/SKILL.json', (data) => {
@@ -94,17 +101,21 @@ function setBGM(list) {
 
 function loadBGM(sortType) {
   document.getElementById('waiting').style.display = 'block';
+  var minLv = document.getElementById("range-1").value;
+  var maxLv = document.getElementById("range-2").value;
   var list = [];
   $.getJSON('database/BGM.json', (data) => {
     for (i=0; i<data.BGM.length; i++) {
-      var x = {
-        name:data.BGM[i].name,
-        id:data.BGM[i].id,
-        time:data.BGM[i].time,
-        notes:data.BGM[i].notes,
-        level:data.BGM[i].level
-      };
-      list.push(x);
+      if (minLv<=data.BGM[i].level&&data.BGM[i].level<=maxLv) {
+        var x = {
+          name:data.BGM[i].name,
+          id:data.BGM[i].id,
+          time:data.BGM[i].time,
+          notes:data.BGM[i].notes,
+          level:data.BGM[i].level
+        };
+        list.push(x);
+      }
     }
     if (sortType=='diff-up') {
       list.sort(function(a,b){

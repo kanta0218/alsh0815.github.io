@@ -10,8 +10,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script/onload.js"></script>
     <script src="script/calc.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <link rel="stylesheet" href="style/main-pc.css">
     <link rel="stylesheet" href="style/main-sp.css">
+    <link rel="stylesheet" href="style/seekbar.css">
 </head>
 
 <body>
@@ -31,7 +33,14 @@ Please wait.
   <option value="diff-down" selected>難易度 - 降順</option>
   <option value="title-up">タイトル - 昇順</option>
   <option value="title-down">タイトル - 降順</option>
-</select>
+</select><br>
+<div>
+<span id="input_rangeLV">Lv.5 〜 Lv.29</span>
+<p class="slidebar-multithumb">
+    <input class="thumb-1" type="range" name="range-1" id="range-1" value="5" min="5" max="29" step="1" onchange="changeLV()">
+    <input class="thumb-2" type="range" name="range-2" id="range-2" value="29" min="5" max="29" step="1" onchange="changeLV()">
+</p>
+</div>
 </td></tr>
 <tr><td rowspan="2" colspan="2">判定</td><td>Perfect</td><td>Great</td><td>Good</td></tr>
 <tr><td><input type="number" class="input_notes" id="input_perfectNotes" placeholder="666" /></td><td><input type="number" class="input_notes" id="input_greatNotes" placeholder="0" /></td><td><input type="number" class="input_notes" id="input_goodNotes" placeholder="0" /></td></tr>
@@ -69,7 +78,7 @@ Please wait.
 
 <hr size="1">
 
-<h4>ver.2.0.0</h4>
+<h4>ver.2.1.0</h4>
 <OBJECT DATA="UPDATE.txt"TYPE="text/plain" WIDTH="100%" id="updHis"></OBJECT>
 
 </body>
