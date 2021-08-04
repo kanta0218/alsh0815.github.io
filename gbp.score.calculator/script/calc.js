@@ -21,6 +21,16 @@ function getComboCoe(maxCombo) {
   if (1300 < maxCombo) { comboCoe = 1.17; }
   if (1400 < maxCombo) { comboCoe = 1.18; }
   if (1500 < maxCombo) { comboCoe = 1.19; }
+  if (1600 < maxCombo) { comboCoe = 1.20; }
+  if (1700 < maxCombo) { comboCoe = 1.21; }
+  if (1800 < maxCombo) { comboCoe = 1.22; }
+  if (1900 < maxCombo) { comboCoe = 1.23; }
+  if (2000 < maxCombo) { comboCoe = 1.24; }
+  if (2100 < maxCombo) { comboCoe = 1.25; }
+  if (2200 < maxCombo) { comboCoe = 1.26; }
+  if (2300 < maxCombo) { comboCoe = 1.27; }
+  if (2400 < maxCombo) { comboCoe = 1.28; }
+  if (2500 < maxCombo) { comboCoe = 1.29; }
   return comboCoe;
 }
 
@@ -40,6 +50,7 @@ function getSkillTime(time) {
 }
 
 function calc() {
+  document.getElementById('waiting').style.display = 'block';
   var bgm = document.getElementById('input_bgm').value;
   $.getJSON('database/BGM.json', (data) => {
     for (i = 0; i < data.BGM.length; i++) {
@@ -90,10 +101,12 @@ function calc() {
                   var skillTime5 = getSkillTime(document.getElementById('input_skillTime5').value);
                   var notesWS = notesPsec * (skillTime1 + skillTime2 + skillTime3 + skillTime4 + skillTime5 + skillTime1);
                   $("#output_notesWS").html(notesWS.toFixed(0));
-                  var fScore = basicScore + (skillCoe1 + skillCoe2 + skillCoe3 + skillCoe4 + skillCoe5 + skillCoe1) / 6 * notesWS * scorePnote * (judgeCoe / 1.1);
+                  var fScore = basicScore + (skillCoe1 + skillCoe2 + skillCoe3 + skillCoe4 + skillCoe5 + skillCoe1) / 6 * notesWS * scorePnote * 1.1 * (judgeCoe / 1.1);
                   $("#output_fScore").html(fScore.toFixed(0));
-                  var apScore = maxBasicScore + (skillCoe1 + skillCoe2 + skillCoe3 + skillCoe4 + skillCoe5 + skillCoe1) / 6 * notesWS * maxScorePnote * (1.1 / 1.1);
+                  var apScore = maxBasicScore + (skillCoe1 + skillCoe2 + skillCoe3 + skillCoe4 + skillCoe5 + skillCoe1) / 6 * notesWS * maxScorePnote * 1.1;
                   $("#output_apScore").html(apScore.toFixed(0));
+                  $("#output_apScoreIndex").html((apScore/compPower).toFixed(3));
+                  document.getElementById('waiting').style.display = 'none';
                 });
               });
             });

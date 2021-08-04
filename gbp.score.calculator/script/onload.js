@@ -1,13 +1,10 @@
+function sortBGM() {
+  var type = document.getElementById('sort_bgm').value;
+  loadBGM(type);
+}
+
 window.onload = function init() {
-    $.getJSON('database/BGM.json', (data) => {
-        var select_bgm = document.getElementById("input_bgm");
-        for (i=0; i<data.BGM.length; i++) {
-            var option = document.createElement("option");
-            option.text = data.BGM[i].name;
-            option.value = data.BGM[i].id;
-            select_bgm.appendChild(option);
-        }
-    });
+    loadBGM('diff-down');
     $.getJSON('database/SKILL.json', (data) => {
         var select_skill1 = document.getElementById("input_skill1");
         for (i=0; i<data.SKILL.length; i++) {
@@ -81,3 +78,63 @@ window.onload = function init() {
         }
     });
 };
+
+function setBGM(list) {
+  var select_bgm = document.getElementById("input_bgm");
+  select_bgm.innerHTML = '';
+  for (i=0; i<list.length; i++) {
+      var option = document.createElement("option");
+      if (list[i].name!=undefined) {
+        option.text = list[i].name;
+        option.value = list[i].id;
+        select_bgm.appendChild(option);
+      }
+    }
+}
+
+function loadBGM(sortType) {
+  document.getElementById('waiting').style.display = 'block';
+  var list = [];
+  $.getJSON('database/BGM.json', (data) => {
+    for (i=0; i<data.BGM.length; i++) {
+      var x = {
+        name:data.BGM[i].name,
+        id:data.BGM[i].id,
+        time:data.BGM[i].time,
+        notes:data.BGM[i].notes,
+        level:data.BGM[i].level
+      };
+      list.push(x);
+    }
+    if (sortType=='diff-up') {
+      list.sort(function(a,b){
+        if (a.level > b.level) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    }
+    if (sortType=='diff-down') {}
+    if (sortType=='title-up') {
+      list.sort(function(a,b){
+        if (a.name > b.name) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    }
+    if (sortType=='title-down') {
+      list.sort(function(a,b){
+        if (b.name > a.name) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    }
+    setBGM(list);
+    document.getElementById('waiting').style.display = 'none';
+  });
+}
