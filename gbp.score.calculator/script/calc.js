@@ -49,6 +49,23 @@ function getSkillTime(time) {
   return parseInt(time.replace("秒", ""));
 }
 
+function setAP() {
+  var tf = document.getElementById('set_ap').checked;
+  if (tf==true) {
+    var bgm = document.getElementById('input_bgm').value;
+    $.getJSON('database/BGM.json', (data) => {
+      for (i = 0; i < data.BGM.length; i++) {
+        if (bgm == data.BGM[i].id) {
+          document.getElementById('input_maxCombo').value = data.BGM[i].notes;
+          document.getElementById('input_perfectNotes').value = data.BGM[i].notes;
+          document.getElementById('input_greatNotes').value = '0';
+          document.getElementById('input_goodNotes').value = '0';
+        }
+      }
+    });
+  }
+}
+
 function calc() {
   document.getElementById('waiting').style.display = 'block';
   var bgm = document.getElementById('input_bgm').value;
