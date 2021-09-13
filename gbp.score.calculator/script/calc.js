@@ -13,24 +13,6 @@ function getComboCoe(maxCombo) {
   if (500 < maxCombo) { comboCoe = 1.09; }
   if (600 < maxCombo) { comboCoe = 1.10; }
   if (700 < maxCombo) { comboCoe = 1.11; }
-  if (800 < maxCombo) { comboCoe = 1.12; }
-  if (900 < maxCombo) { comboCoe = 1.13; }
-  if (1000 < maxCombo) { comboCoe = 1.14; }
-  if (1100 < maxCombo) { comboCoe = 1.15; }
-  if (1200 < maxCombo) { comboCoe = 1.16; }
-  if (1300 < maxCombo) { comboCoe = 1.17; }
-  if (1400 < maxCombo) { comboCoe = 1.18; }
-  if (1500 < maxCombo) { comboCoe = 1.19; }
-  if (1600 < maxCombo) { comboCoe = 1.20; }
-  if (1700 < maxCombo) { comboCoe = 1.21; }
-  if (1800 < maxCombo) { comboCoe = 1.22; }
-  if (1900 < maxCombo) { comboCoe = 1.23; }
-  if (2000 < maxCombo) { comboCoe = 1.24; }
-  if (2100 < maxCombo) { comboCoe = 1.25; }
-  if (2200 < maxCombo) { comboCoe = 1.26; }
-  if (2300 < maxCombo) { comboCoe = 1.27; }
-  if (2400 < maxCombo) { comboCoe = 1.28; }
-  if (2500 < maxCombo) { comboCoe = 1.29; }
   return comboCoe;
 }
 
@@ -102,7 +84,6 @@ function calc() {
         var maxBasicScore = compPower * 3 * diffCoe * 1.1 * getComboCoe(notes);
         $("#output_bScore").html(basicScore.toFixed(0));
         var scorePnote = basicScore / notes;
-        var maxScorePnote = maxBasicScore / notes;
         $("#output_spn").html(scorePnote.toFixed(2));
         var notesPsec = notes / time;
         $("#output_nps").html(notesPsec.toFixed(2));
@@ -117,6 +98,8 @@ function calc() {
                   var skillTime4 = getSkillTime(document.getElementById('input_skillTime4').value);
                   var skillTime5 = getSkillTime(document.getElementById('input_skillTime5').value);
                   var notesWS = notesPsec * (skillTime1 + skillTime2 + skillTime3 + skillTime4 + skillTime5 + skillTime1);
+                  var maxScorePnote = (compPower * 3 * diffCoe / notes * 1.1 * getComboCoe(notes));
+                  var maxScorePnote_WS = maxScorePnote * ((skillCoe1 + skillCoe2 + skillCoe3 + skillCoe4 + skillCoe5 + skillCoe1) / 6);
                   $("#output_notesWS").html(notesWS.toFixed(0));
                   var fScore = basicScore + (skillCoe1 + skillCoe2 + skillCoe3 + skillCoe4 + skillCoe5 + skillCoe1) / 6 * notesWS * scorePnote * 1.1 * (judgeCoe / 1.1);
                   $("#output_fScore").html(fScore.toFixed(0));
