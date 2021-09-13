@@ -64,46 +64,67 @@
             "level":28
         },
         {
+            "name":"競宴Red×Violet - EXPERT Lv.28",
+            "id":"BIDx00010",
+            "time":106,
+            "notes":1002,
+            "level":28
+        },
+        {
           "name": "God knows... - EXPERT Lv.28",
-          "id": "BIDx00010",
+          "id": "BIDx00011",
           "time": 122,
           "notes": 1081,
           "level": 28
         },
         {
           "name": "天ノ弱 - EXPERT Lv.28",
-          "id": "BIDx00011",
+          "id": "BIDx00012",
           "time": 106,
           "notes": 967,
           "level": 28
         },
         {
           "name": "Paradisus-Paradoxum - EXPERT Lv.28",
-          "id": "BIDx00012",
+          "id": "BIDx00013",
           "time": 90,
           "notes": 813,
           "level": 28
         },
         {
           "name": "シュガーソングとビターステップ - EXPERT Lv.28",
-          "id": "BIDx00013",
+          "id": "BIDx00014",
           "time": 105,
           "notes": 811,
           "level": 28
         },
         {
           "name": "劣等上等 - EXPERT Lv.28",
-          "id": "BIDx00014",
+          "id": "BIDx00015",
           "time": 133,
           "notes": 1129,
           "level": 28
         },
         {
           "name": "SAVIOR OF SONG - EXPERT Lv.28",
-          "id": "BIDx00015",
+          "id": "BIDx00016",
           "time": 85,
           "notes": 772,
           "level": 28
+        },
+        {
+            "name":"[FULL] ON YOUR MARK - EXPERT Lv.27",
+            "id":"BIDx00017",
+            "time":236,
+            "notes":1895,
+            "level":27
+        },
+        {
+            "name":"ゼッタイ宣言〜Recital〜 - EXPERT Lv.27",
+            "id":"BIDx00018",
+            "time":103,
+            "notes":921,
+            "level":27
         }
     ]
 }

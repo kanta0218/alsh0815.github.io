@@ -1,3 +1,9 @@
+・ver.2.2.0
+  > 楽曲を追加
+    > 競宴Red×Violet - EXPERT Lv.28
+    > [FULL] ON YOUR MARK - EXPERT Lv.27
+    > ゼッタイ宣言〜Recital〜 - EXPERT Lv.27
+
 ・ver.2.1.0
   > 楽曲絞り込み(レベル指定)機能を追加
   > APオプションを追加
