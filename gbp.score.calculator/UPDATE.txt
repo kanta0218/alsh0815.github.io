@@ -1,3 +1,6 @@
+・ver.2.3.1
+  > Lv.30の楽曲が表示されない問題を修正
+
 ・ver.2.3.0
   > 楽曲を追加
     > HELL! or HELL? - SPECIAL Lv.30
