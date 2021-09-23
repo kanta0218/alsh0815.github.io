@@ -1,129 +1,157 @@
 {
     "BGM":[
         {
+            "name":"HELL! or HELL? - SPECIAL Lv.30",
+            "id":"d9ece07b-add5-4869-9997-b75810301587",
+            "time":104,
+            "notes":1196,
+            "level":30
+        },
+        {
             "name":"セツナトリップ - SPECIAL Lv.29",
-            "id":"BIDx00001",
+            "id":"f7e980eb-ddf5-42ca-94b9-7077f742981f",
             "time":122,
             "notes":1087,
             "level":29
         },
         {
             "name":"六兆年と一夜物語 - SPECIAL Lv.29",
-            "id":"BIDx00002",
+            "id":"57d80146-2fad-467e-8913-66fbce1808c4",
             "time":96,
             "notes":935,
             "level":29
         },
         {
             "name":"六兆年と一夜物語 - EXPERT Lv.29",
-            "id":"BIDx00003",
+            "id":"5e903d7b-37c9-4f3c-b2bf-80ef9bcddb3e",
             "time":96,
             "notes":895,
             "level":29
         },
         {
             "name":"Hey-day狂騒曲 (カプリチオ) - EXPERT Lv.28",
-            "id":"BIDx00004",
+            "id":"2472423d-dc6a-4dbe-802e-737142276bb5",
             "time":106,
             "notes":878,
             "level":28
         },
         {
             "name":"SENSENFUKOKU - EXPERT Lv.28",
-            "id":"BIDx00005",
+            "id":"5fbec421-e557-42ba-9d84-1df322a68908",
             "time":98,
             "notes":851,
             "level":28
         },
         {
             "name":"Re:birth day - EXPERT Lv.28",
-            "id":"BIDx00006",
+            "id":"26329a9c-13a1-4450-90d1-4757ae2e2239",
             "time":120,
             "notes":848,
             "level":28
         },
         {
             "name":"Opera of the wasteland - EXPERT Lv.28",
-            "id":"BIDx00007",
+            "id":"9ef53d78-32ac-4b6c-a9d9-a3d3c83b2448",
             "time":106,
             "notes":696,
             "level":28
         },
         {
             "name":"Ringing Bloom - EXPERT Lv.28",
-            "id":"BIDx00008",
+            "id":"1b8b7556-284e-4429-85f4-308c775598aa",
             "time":117,
             "notes":1094,
             "level":28
         },
         {
             "name":"[FULL] FIRE BIRD - EXPERT Lv.28",
-            "id":"BIDx00009",
+            "id":"30f95c49-a7d8-4fa4-8676-d1f0e4568f72",
             "time":317,
             "notes":2331,
             "level":28
         },
         {
+            "name":"HELL! or HELL? - EXPERT Lv.28",
+            "id":"c1888da4-fb1a-4e75-9b8d-906f8401832d",
+            "time":104,
+            "notes":999,
+            "level":28
+        },
+        {
             "name":"競宴Red×Violet - EXPERT Lv.28",
-            "id":"BIDx00010",
+            "id":"6cf5e925-59c9-449c-bed9-d87d7fb5c01b",
             "time":106,
             "notes":1002,
             "level":28
         },
         {
           "name": "God knows... - EXPERT Lv.28",
-          "id": "BIDx00011",
+          "id": "53bb9ee8-c0d0-40aa-9e78-bdce69503521",
           "time": 122,
           "notes": 1081,
           "level": 28
         },
         {
           "name": "天ノ弱 - EXPERT Lv.28",
-          "id": "BIDx00012",
+          "id": "8b3fbc3f-6ccf-497b-9b34-bbba6161347d",
           "time": 106,
           "notes": 967,
           "level": 28
         },
         {
           "name": "Paradisus-Paradoxum - EXPERT Lv.28",
-          "id": "BIDx00013",
+          "id": "05669a13-184a-4011-b74a-76a1e9aa5a10",
           "time": 90,
           "notes": 813,
           "level": 28
         },
         {
           "name": "シュガーソングとビターステップ - EXPERT Lv.28",
-          "id": "BIDx00014",
+          "id": "1ab9030a-6b40-4662-beaf-a737f143bab0",
           "time": 105,
           "notes": 811,
           "level": 28
         },
         {
           "name": "劣等上等 - EXPERT Lv.28",
-          "id": "BIDx00015",
+          "id": "9c9bb568-4d39-4b2c-ae12-d1ab055b45cd",
           "time": 133,
           "notes": 1129,
           "level": 28
         },
         {
           "name": "SAVIOR OF SONG - EXPERT Lv.28",
-          "id": "BIDx00016",
+          "id": "e32950a7-b1a0-4d08-b99b-06e0d4869071",
           "time": 85,
           "notes": 772,
           "level": 28
         },
         {
             "name":"[FULL] ON YOUR MARK - EXPERT Lv.27",
-            "id":"BIDx00017",
+            "id":"0fb57886-a132-4a64-9ea1-e0e0dc333a05",
             "time":236,
             "notes":1895,
             "level":27
         },
         {
             "name":"ゼッタイ宣言〜Recital〜 - EXPERT Lv.27",
-            "id":"BIDx00018",
+            "id":"72ddaf03-a929-4a7f-b0ff-0b7e0aa35dbe",
             "time":103,
             "notes":921,
+            "level":27
+        },
+        {
+            "name":"[FULL] きゅ〜まい＊flower - EXPERT Lv.27",
+            "id":"050dc4ab-e425-4672-a0e7-29d61553ea9e",
+            "time":214,
+            "notes":1653,
+            "level":27
+        },
+        {
+            "name":"LOUDER - EXPERT Lv.27",
+            "id":"4790ed92-9c7b-4562-b502-92254095a8fe",
+            "time":103,
+            "notes":828,
             "level":27
         }
     ]

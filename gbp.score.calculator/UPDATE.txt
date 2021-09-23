@@ -1,3 +1,11 @@
+・ver.2.3.0
+  > 楽曲を追加
+    > HELL! or HELL? - SPECIAL Lv.30
+    > HELL! or HELL? - EXPERT Lv.28
+    > [FULL] きゅ〜まい＊flower - EXPERT Lv.27
+    > LOUDER - EXPERT Lv.27
+  > 一部データベースを変更
+
 ・ver.2.2.0
   > 楽曲を追加
     > 競宴Red×Violet - EXPERT Lv.28

@@ -104,7 +104,8 @@ function loadBGM(sortType) {
   var minLv = document.getElementById("range-1").value;
   var maxLv = document.getElementById("range-2").value;
   var list = [];
-  $.getJSON('database/BGM.json', (data) => {
+  var ct = (new Date()).getTime();
+  $.getJSON('database/BGM.json?p='+ct, (data) => {
     for (i=0; i<data.BGM.length; i++) {
       if (minLv<=data.BGM[i].level&&data.BGM[i].level<=maxLv) {
         var x = {
