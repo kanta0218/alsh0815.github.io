@@ -111,6 +111,15 @@ function calc() {
                   $("#output_apScoreIndex").html((apScore/compPower).toFixed(3));
                   var achievementRate = ((perfectNotes * 1.1) + (greatNotes * 0.8) + (goodNotes * 0.5)) / (notes * 1.1) * 100;
                   $("#output_achievementRate").html(achievementRate.toFixed(5)+"%");
+                  
+                  var theo_compPower = 300000;
+                  var theo_basicScore = theo_compPower * 3 * diffCoe * 1.1 * getComboCoe(notes);
+                  var theo_noteWS = notesPsec * (7.0 + 7.0 + 7.0 + 7.0 + 7.0 + 7.0);
+                  var theo_maxSPN = (theo_compPower * 3 * diffCoe / notes * 1.1 * getComboCoe(notes));
+                  var theo_apScore = theo_basicScore + (1.15 + 1.15 + 1.25 + 1.20 + 1.20 + 1.25) / 6 * theo_noteWS * theo_maxSPN * 1.1;
+                  $("#output_theoScore").html(theo_apScore.toFixed(0));
+                  var theo_rate = (fScore / theo_apScore) * 100;
+                  $("#output_theoretical").html(theo_rate.toFixed(5)+"%");
                   document.getElementById('waiting').style.display = 'none';
                 });
               });
