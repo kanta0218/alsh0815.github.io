@@ -1,3 +1,16 @@
+・ver.2.4.0
+  > 楽曲を追加
+    > Determination Symphony - EXPERT Lv.27
+    > ONENESS - EXPERT Lv.27
+    > PASSIONATE ANTHEM - EXPERT Lv.27
+    > FIRE BIRD - EXPERT Lv.27
+    > Song I am. - EXPERT Lv.27
+    > ZEAL of proud - EXPERT Lv.27
+    > Keep Heart - EXPERT Lv.27
+    > Proud of oneself - EXPERT Lv.27
+    > overtuRe - EXPERT Lv.27
+    > Sing Alive - EXPERT Lv.27
+
 ・ver.2.3.1
   > Lv.30の楽曲が表示されない問題を修正
 
