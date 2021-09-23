@@ -1,3 +1,7 @@
+・ver.2.5.0
+  > 計算結果に達成率を追加
+  > バグを修正
+
 ・ver.2.4.0
   > 楽曲を追加
     > Determination Symphony - EXPERT Lv.27

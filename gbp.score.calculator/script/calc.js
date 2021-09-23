@@ -71,11 +71,14 @@ function calc() {
         var maxCombo = document.getElementById('input_maxCombo').value;
         var comboCoe = getComboCoe(maxCombo);
         $("#output_comboCoe").html(comboCoe.toFixed(2));
-        var perfectNP = document.getElementById('input_perfectNotes').value / notes;
+        var perfectNotes = document.getElementById('input_perfectNotes').value;
+        var greatNotes = document.getElementById('input_greatNotes').value;
+        var goodNotes = document.getElementById('input_goodNotes').value;
+        var perfectNP = perfectNotes / notes;
         $("#output_perfectNP").html(perfectNP.toFixed(3));
-        var greatNP = document.getElementById('input_greatNotes').value / notes;
+        var greatNP = greatNotes / notes;
         $("#output_greatNP").html(greatNP.toFixed(3));
-        var goodNP = document.getElementById('input_goodNotes').value / notes;
+        var goodNP = goodNotes / notes;
         $("#output_goodNP").html(goodNP.toFixed(3));
         var judgeCoe = 1.1 * perfectNP + 0.8 * greatNP + 0.5 * goodNP;
         $("#output_judgeCoe").html(judgeCoe.toFixed(3));
@@ -106,6 +109,8 @@ function calc() {
                   var apScore = maxBasicScore + (skillCoe1 + skillCoe2 + skillCoe3 + skillCoe4 + skillCoe5 + skillCoe1) / 6 * notesWS * maxScorePnote * 1.1;
                   $("#output_apScore").html(apScore.toFixed(0));
                   $("#output_apScoreIndex").html((apScore/compPower).toFixed(3));
+                  var achievementRate = ((perfectNotes * 1.1) + (greatNotes * 0.8) + (goodNotes * 0.5)) / (notes * 1.1) * 100;
+                  $("#output_achievementRate").html(achievementRate.toFixed(5)+"%");
                   document.getElementById('waiting').style.display = 'none';
                 });
               });
