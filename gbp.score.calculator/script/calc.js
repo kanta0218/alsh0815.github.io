@@ -106,9 +106,11 @@ function calc() {
                   $("#output_notesWS").html(notesWS.toFixed(0));
                   var fScore = basicScore + (skillCoe1 + skillCoe2 + skillCoe3 + skillCoe4 + skillCoe5 + skillCoe1) / 6 * notesWS * scorePnote * 1.1 * (judgeCoe / 1.1);
                   $("#output_fScore").html(fScore.toFixed(0));
-                  var apScore = maxBasicScore + (skillCoe1 + skillCoe2 + skillCoe3 + skillCoe4 + skillCoe5 + skillCoe1) / 6 * notesWS * maxScorePnote * 1.1;
+                  var scoreIndex = data.BGM[i].scoreIndex;
+                  var apScore = scoreIndex * compPower * comboCoe + (notesWS * (skillTime1*6-30) * notesPsec);
+                  if (scoreIndex==undefined) { scoreIndex = 6.000; }
                   $("#output_apScore").html(apScore.toFixed(0));
-                  $("#output_apScoreIndex").html((apScore/compPower).toFixed(3));
+                  $("#output_apScoreIndex").html(scoreIndex.toFixed(3));
                   var achievementRate = ((perfectNotes * 1.1) + (greatNotes * 0.8) + (goodNotes * 0.5)) / (notes * 1.1) * 100;
                   $("#output_achievementRate").html(achievementRate.toFixed(5)+"%");
                   
