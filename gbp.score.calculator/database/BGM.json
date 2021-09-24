@@ -5,8 +5,7 @@
             "id":"d9ece07b-add5-4869-9997-b75810301587",
             "time":104,
             "notes":1196,
-            "level":30,
-            "scoreIndex": 6.943
+            "level":30
         },
         {
             "name":"セツナトリップ - SPECIAL Lv.29",
@@ -223,6 +222,27 @@
             "id":"2f79ca0b-a716-4de9-81a6-e18eb44f3632",
             "time":97,
             "notes":769,
+            "level":27
+        },
+        {
+            "name":"ゴーカ！ごーかい！？ファントムシーフ！ - EXPERT Lv.27",
+            "id":"4b9f8551-2668-4c65-b557-e1618e550fc8",
+            "time":98,
+            "notes":698,
+            "level":27
+        },
+        {
+            "name":"[FULL] えがお・シング・あ・ソング - EXPERT Lv.27",
+            "id":"b6985abf-6a7f-45e5-9a36-9ad00f651de0",
+            "time":243,
+            "notes":1737,
+            "level":27
+        },
+        {
+            "name":"flame of hope - EXPERT Lv.27",
+            "id":"81de2e98-a74b-45d2-b28c-f0db0ed080dd",
+            "time":108,
+            "notes":969,
             "level":27
         }
     ]
