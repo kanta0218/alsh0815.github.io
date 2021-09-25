@@ -65,7 +65,7 @@ function calc () {
         var compPower = document.getElementById('input_CompPower').value;
         var compPower_theo = 300000; // 理論値バンド総合力
         var notePsec = notes / time;
-        $("#output_nps").html(notePsec);
+        $("#output_nps").html(notePsec.toFixed(1));
         
         var perfectNotes = parseInt(document.getElementById('input_perfectNotes').value);
         var greatNotes = parseInt(document.getElementById('input_greatNotes').value);
@@ -98,10 +98,14 @@ function calc () {
                   var noteScore_GR = compPower * 3 * diffCoe / notes * 0.8;
                   var noteScore_GD = compPower * 3 * diffCoe / notes * 0.5;
                   var noteScore_theo = compPower_theo * 3 * diffCoe / notes * 1.1;
+                  
+                  
                   // スコア計算 (スキル無しAP)
                   for (ii = 0; ii < notes; ii++) {
                     basicScore_AP = basicScore_AP + (noteScore * getComboCoe(ii));
                   }
+                  
+                  
                   // スコア計算 (スキル有りAP)
                   var skillTime1 = getSkillTime(document.getElementById('input_skillTime1').value);
                   var skillTime2 = getSkillTime(document.getElementById('input_skillTime2').value);
@@ -115,7 +119,7 @@ function calc () {
                   var SETim_1st = STim_1st + parseInt((notePsec * skillTime1).toFixed(0));
                   var STim_2nd = STim_1st + skillTiming;
                   var SETim_2nd = STim_2nd + parseInt((notePsec * skillTime2).toFixed(0));
-                  var STim_3rd = STim_2nd + skillTiming;
+                  var STim_3rd = STim_2nd + skillTiming + parseInt((notes * 0.02).toFixed(0));
                   var SETim_3rd = STim_3rd + parseInt((notePsec * skillTime3).toFixed(0));
                   var STim_4th = STim_3rd + skillTiming;
                   var SETim_4th = STim_4th + parseInt((notePsec * skillTime4).toFixed(0));
@@ -138,6 +142,26 @@ function calc () {
                       basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillCoe1));
                     } else {
                       basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii));
+                    }
+                  }
+                  
+                  
+                  // スコア計算 (予測値)
+                  for (iv = 0; iv < perfectNotes; iv++) {
+                    if (STim_1st <= iv && iv <= SETim_1st) {
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe1));
+                    } else if (STim_2nd <= iv && iv <= SETim_2nd) {
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe2));
+                    } else if (STim_3rd <= iv && iv <= SETim_3rd) {
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe3));
+                    } else if (STim_4th <= iv && iv <= SETim_4th) {
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe4));
+                    } else if (STim_5th <= iv && iv <= SETim_5th) {
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe5));
+                    } else if (STim_6th <= iv && iv <= SETim_6th) {
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe1));
+                    } else {
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv));
                     }
                   }
                   for (v = 0; v < greatNotes; v++) {
@@ -178,25 +202,8 @@ function calc () {
                     basicScore_preMax = basicScore_preMax - noteScore;
                   }
                   
-                  // スコア計算 (予測値)
                   console.log("miss: "+missNotes+' '+notes+' '+(perfectNotes+greatNotes+goodNotes));
-                  for (iv = 0; iv < perfectNotes; iv++) {
-                    if (STim_1st <= iv && iv <= SETim_1st) {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe1));
-                    } else if (STim_2nd <= iv && iv <= SETim_2nd) {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe2));
-                    } else if (STim_3rd <= iv && iv <= SETim_3rd) {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe3));
-                    } else if (STim_4th <= iv && iv <= SETim_4th) {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe4));
-                    } else if (STim_5th <= iv && iv <= SETim_5th) {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe5));
-                    } else if (STim_6th <= iv && iv <= SETim_6th) {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe1));
-                    } else {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv));
-                    }
-                  }
+                  
                   
                   // スコア計算 (理論値)
                   var skillTime_theo = 7;
@@ -207,7 +214,7 @@ function calc () {
                   var SETim_1st_theo = STim_1st_theo + parseInt((notePsec * skillTime_theo).toFixed(0));
                   var STim_2nd_theo = STim_1st_theo + skillTiming;
                   var SETim_2nd_theo = STim_2nd_theo + parseInt((notePsec * skillTime_theo).toFixed(0));
-                  var STim_3rd_theo = STim_2nd_theo + skillTiming;
+                  var STim_3rd_theo = STim_2nd_theo + skillTiming + parseInt((notes * 0.02).toFixed(0));
                   var SETim_3rd_theo = STim_3rd_theo + parseInt((notePsec * skillTime_theo).toFixed(0));
                   var STim_4th_theo = STim_3rd_theo + skillTiming;
                   var SETim_4th_theo = STim_4th_theo + parseInt((notePsec * skillTime_theo).toFixed(0));
