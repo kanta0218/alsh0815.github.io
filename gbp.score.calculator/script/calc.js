@@ -100,6 +100,20 @@ function calc () {
                   var noteScore_theo = compPower_theo * 3 * diffCoe / notes * 1.1;
                   
                   
+                  var skillList = [skillCoe1, skillCoe2, skillCoe3, skillCoe4, skillCoe5];
+                  // スキル係数ソート (降順)
+                  skillList.sort(function(a,b){
+                    if (a < b) {
+                      return 1;
+                    } else {
+                      return -1;
+                    }
+                  });
+                  
+                  
+                  console.log('Skill coe: '+JSON.stringify(skillList));
+                  
+                  
                   // スコア計算 (スキル無しAP)
                   for (ii = 0; ii < notes; ii++) {
                     basicScore_AP = basicScore_AP + (noteScore * getComboCoe(ii));
@@ -129,15 +143,15 @@ function calc () {
                   var SETim_6th = STim_6th + parseInt((notePsec * skillTime1).toFixed(0));
                   for (iii = 0; iii < notes; iii++) {
                     if (STim_1st <= iii && iii <= SETim_1st) {
-                      basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillCoe1));
+                      basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillList[4]));
                     } else if (STim_2nd <= iii && iii <= SETim_2nd) {
-                      basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillCoe2));
+                      basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillList[3]));
                     } else if (STim_3rd <= iii && iii <= SETim_3rd) {
-                      basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillCoe3));
+                      basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillList[2]));
                     } else if (STim_4th <= iii && iii <= SETim_4th) {
-                      basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillCoe4));
+                      basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillList[1]));
                     } else if (STim_5th <= iii && iii <= SETim_5th) {
-                      basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillCoe5));
+                      basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillList[0]));
                     } else if (STim_6th <= iii && iii <= SETim_6th) {
                       basicScore_SAP = basicScore_SAP + (noteScore * getComboCoe(iii) * (1 + skillCoe1));
                     } else {
@@ -149,56 +163,38 @@ function calc () {
                   // スコア計算 (予測値)
                   for (iv = 0; iv < perfectNotes; iv++) {
                     if (STim_1st <= iv && iv <= SETim_1st) {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe1));
+                      basicScore_preMin = basicScore_preMin + (noteScore * getComboCoe(iv) * (1 + skillList[0]));
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillList[4]));
                     } else if (STim_2nd <= iv && iv <= SETim_2nd) {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe2));
+                      basicScore_preMin = basicScore_preMin + (noteScore * getComboCoe(iv) * (1 + skillList[1]));
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillList[3]));
                     } else if (STim_3rd <= iv && iv <= SETim_3rd) {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe3));
+                      basicScore_preMin = basicScore_preMin + (noteScore * getComboCoe(iv) * (1 + skillList[2]));
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillList[2]));
                     } else if (STim_4th <= iv && iv <= SETim_4th) {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe4));
+                      basicScore_preMin = basicScore_preMin + (noteScore * getComboCoe(iv) * (1 + skillList[3]));
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillList[1]));
                     } else if (STim_5th <= iv && iv <= SETim_5th) {
-                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe5));
+                      basicScore_preMin = basicScore_preMin + (noteScore * getComboCoe(iv) * (1 + skillList[4]));
+                      basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillList[0]));
                     } else if (STim_6th <= iv && iv <= SETim_6th) {
+                      basicScore_preMin = basicScore_preMin + (noteScore * getComboCoe(iv) * (1 + skillCoe1));
                       basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv) * (1 + skillCoe1));
                     } else {
+                      basicScore_preMin = basicScore_preMin + (noteScore * getComboCoe(iv));
                       basicScore_preMax = basicScore_preMax + (noteScore * getComboCoe(iv));
                     }
                   }
                   for (v = 0; v < greatNotes; v++) {
-                    if (STim_1st <= v && v <= SETim_1st) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GR * getComboCoe(v) * (1 + skillCoe1));
-                    } else if (STim_2nd <= v && v <= SETim_2nd) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GR * getComboCoe(v) * (1 + skillCoe2));
-                    } else if (STim_3rd <= v && v <= SETim_3rd) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GR * getComboCoe(v) * (1 + skillCoe3));
-                    } else if (STim_4th <= v && v <= SETim_4th) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GR * getComboCoe(v) * (1 + skillCoe4));
-                    } else if (STim_5th <= v && v <= SETim_5th) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GR * getComboCoe(v) * (1 + skillCoe5));
-                    } else if (STim_6th <= v && v <= SETim_6th) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GR * getComboCoe(v) * (1 + skillCoe1));
-                    } else {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GR * getComboCoe(v));
-                    }
+                    basicScore_preMin = basicScore_preMin + (noteScore_GR * getComboCoe(v));
+                    basicScore_preMax = basicScore_preMax + (noteScore_GR * getComboCoe(v));
                   }
                   for (vi = 0; vi < goodNotes; vi++) {
-                    if (STim_1st <= vi && vi <= SETim_1st) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GD * getComboCoe(vi) * (1 + skillCoe1));
-                    } else if (STim_2nd <= vi && vi <= SETim_2nd) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GD * getComboCoe(vi) * (1 + skillCoe2));
-                    } else if (STim_3rd <= vi && vi <= SETim_3rd) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GD * getComboCoe(vi) * (1 + skillCoe3));
-                    } else if (STim_4th <= vi && vi <= SETim_4th) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GD * getComboCoe(vi) * (1 + skillCoe4));
-                    } else if (STim_5th <= vi && vi <= SETim_5th) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GD * getComboCoe(vi) * (1 + skillCoe5));
-                    } else if (STim_6th <= vi && vi <= SETim_6th) {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GD * getComboCoe(vi) * (1 + skillCoe1));
-                    } else {
-                      basicScore_preMax = basicScore_preMax + (noteScore_GD * getComboCoe(vi));
-                    }
+                    basicScore_preMin = basicScore_preMin + (noteScore_GD * getComboCoe(vi));
+                    basicScore_preMax = basicScore_preMax + (noteScore_GD * getComboCoe(vi));
                   }
                   for (vii = 0; vii < missNotes; vii++) {
+                    basicScore_preMin = basicScore_preMin - (noteScore * getComboCoe(notes));
                     basicScore_preMax = basicScore_preMax - noteScore;
                   }
                   
@@ -252,6 +248,7 @@ function calc () {
                   $("#output_bScore").html(comma(basicScore_AP.toFixed(0)));
                   $("#output_apScore").html(comma(basicScore_SAP.toFixed(0)));
                   $("#output_fScore").html(comma(basicScore_preMax.toFixed(0)));
+                  $("#output_fScoreMin").html(comma(basicScore_preMin.toFixed(0)));
                   $("#output_theoScore").html(comma(basicScore_Theo.toFixed(0)));
                   $("#output_theoretical").html(theoretical.toFixed(5)+'%');
                   $("#output_achievementRate").html(ap_rate.toFixed(5)+'%');
