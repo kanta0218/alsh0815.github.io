@@ -103,22 +103,74 @@ function loadBGM(sortType) {
   document.getElementById('waiting').style.display = 'block';
   var minLv = document.getElementById("range-1").value;
   var maxLv = document.getElementById("range-2").value;
+  var diff = $("input[name='sortDF']:checked").val();
+  console.log('Sort BGM: '+diff);
   var list = [];
   var ct = (new Date()).getTime();
   $.getJSON('database/BGM.json?p='+ct, (data) => {
     for (i=0; i<data.BGM.length; i++) {
-      if (minLv<=data.BGM[i].level&&data.BGM[i].level<=maxLv) {
         var x = {
-          name:data.BGM[i].name,
+          name:'',
           id:data.BGM[i].id,
           time:data.BGM[i].time,
-          notes:data.BGM[i].notes,
-          level:data.BGM[i].level
+          notes:0,
+          level:0
         };
-        list.push(x);
-      }
+        if (diff=='0') {
+          if (data.BGM[i].notes.easy!=undefined) {
+            if (minLv<=data.BGM[i].level.easy&&data.BGM[i].level.easy<=maxLv) {
+              x.name = data.BGM[i].name+' - Lv.'+data.BGM[i].level.easy;
+              x.notes = data.BGM[i].notes.easy;
+              x.level = data.BGM[i].level.easy;
+              list.push(x);
+            }
+          }
+        } else if (diff=='1') {
+          if (data.BGM[i].notes.normal!=undefined) {
+            if (minLv<=data.BGM[i].level.normal&&data.BGM[i].level.normal<=maxLv) {
+              x.name = data.BGM[i].name+' - Lv.'+data.BGM[i].level.normal;
+              x.notes = data.BGM[i].notes.normal;
+              x.level = data.BGM[i].level.normal;
+              list.push(x);
+            }
+          }
+        } else if (diff=='2') {
+          if (data.BGM[i].notes.hard!=undefined) {
+            if (minLv <= data.BGM[i].level.hard && data.BGM[i].level.hard <= maxLv) {
+              x.name = data.BGM[i].name + ' - Lv.' + data.BGM[i].level.hard;
+              x.notes = data.BGM[i].notes.hard;
+              x.level = data.BGM[i].level.hard;
+              list.push(x);
+            }
+          }
+        } else if (diff=='3') {
+          if (data.BGM[i].notes.expert!=undefined) {
+            if (minLv <= data.BGM[i].level.expert && data.BGM[i].level.expert <= maxLv) {
+              x.name = data.BGM[i].name + ' - Lv.' + data.BGM[i].level.expert;
+              x.notes = data.BGM[i].notes.expert;
+              x.level = data.BGM[i].level.expert;
+              list.push(x);
+            }
+          }
+        } else if (diff=='4') {
+          if (data.BGM[i].notes.special!=undefined) {
+            if (minLv <= data.BGM[i].level.special && data.BGM[i].level.special <= maxLv) {
+              x.name = data.BGM[i].name + ' - Lv.' + data.BGM[i].level.special;
+              x.notes = data.BGM[i].notes.special;
+              x.level = data.BGM[i].level.special;
+              list.push(x);
+            }
+          }
+        }
     }
     if (sortType=='diff-up') {
+      list.sort(function(a,b){
+        if (a.band > b.band) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
       list.sort(function(a,b){
         if (a.level > b.level) {
           return 1;
@@ -127,7 +179,22 @@ function loadBGM(sortType) {
         }
       });
     }
-    if (sortType=='diff-down') {}
+    if (sortType=='diff-down') {
+      list.sort(function(a,b){
+        if (a.band > b.band) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      list.sort(function(a,b){
+        if (a.level < b.level) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    }
     if (sortType=='title-up') {
       list.sort(function(a,b){
         if (a.name > b.name) {

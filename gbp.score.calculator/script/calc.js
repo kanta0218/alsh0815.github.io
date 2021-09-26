@@ -39,11 +39,13 @@ function setAP() {
   var tf = document.getElementById('set_ap').checked;
   if (tf==true) {
     var bgm = document.getElementById('input_bgm').value;
+    var dif = ['easy','normal','hard','expert','special'];
+    var n = parseInt($("input[name='sortDF']:checked").val());
     $.getJSON('database/BGM.json', (data) => {
       for (i = 0; i < data.BGM.length; i++) {
         if (bgm == data.BGM[i].id) {
-          document.getElementById('input_maxCombo').value = data.BGM[i].notes;
-          document.getElementById('input_perfectNotes').value = data.BGM[i].notes;
+          document.getElementById('input_maxCombo').value = data.BGM[i].notes[dif[n]];
+          document.getElementById('input_perfectNotes').value = data.BGM[i].notes[dif[n]];
           document.getElementById('input_greatNotes').value = '0';
           document.getElementById('input_goodNotes').value = '0';
         }
@@ -55,11 +57,13 @@ function setAP() {
 function calc () {
   document.getElementById('waiting').style.display = 'block';
   var bgm = document.getElementById('input_bgm').value;
+  var dif = ['easy','normal','hard','expert','special'];
+  var n = parseInt($("input[name='sortDF']:checked").val());
   $.getJSON('database/BGM.json', function(data) {
     for (i = 0; i < data.BGM.length; i++) {
       if (bgm == data.BGM[i].id) {
-        var level = data.BGM[i].level;
-        var notes = data.BGM[i].notes;
+        var level = data.BGM[i].level[dif[n]];
+        var notes = data.BGM[i].notes[dif[n]];
         var time = data.BGM[i].time;
         var diffCoe = (level - 5) * 0.01 + 1;
         var compPower = document.getElementById('input_CompPower').value;

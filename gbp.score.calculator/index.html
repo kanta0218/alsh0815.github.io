@@ -28,6 +28,7 @@ Please wait.
 </div>
 
 <div align="center">
+
 <table border="1" id="input_table">
 <tr><td colspan="2">総合力</td><td colspan="3"><input type="number" id="input_CompPower" placeholder="280000" /></td></tr>
 <tr><td colspan="2">楽曲</td><td colspan="3"><select id="input_bgm"></select>
@@ -37,13 +38,31 @@ Please wait.
   <option value="title-up">タイトル - 昇順</option>
   <option value="title-down">タイトル - 降順</option>
 </select><br>
+
 <div>
-<span id="input_rangeLV">Lv.5 〜 Lv.30</span>
+<label for="sortDF_Easy" class="sortDF_Label">
+  <input type="radio" id="sortDF_Easy" name="sortDF" value="0" onclick="sortBGM()">Easy
+</label>
+<label for="sortDF_Normal" class="sortDF_Label">
+  <input type="radio" id="sortDF_Normal" name="sortDF" value="1" onclick="sortBGM()">Normal
+</label>
+<label for="sortDF_Hard" class="sortDF_Label">
+  <input type="radio" id="sortDF_Hard" name="sortDF" value="2" onclick="sortBGM()">Hard
+</label>
+<label for="sortDF_Expert" class="sortDF_Label">
+  <input type="radio" id="sortDF_Expert" name="sortDF" value="3" onclick="sortBGM()" checked>Expert
+</label>
+<label for="sortDF_Special" class="sortDF_Label">
+  <input type="radio" id="sortDF_Special" name="sortDF" value="4" onclick="sortBGM()">Special
+</label>
+</div>
+
+<div>
+<br><span id="input_rangeLV">Lv.5 〜 Lv.30</span>
 <p class="slidebar-multithumb">
     <input class="thumb-1" type="range" name="range-1" id="range-1" value="5" min="5" max="30" step="1" onchange="changeLV()">
     <input class="thumb-2" type="range" name="range-2" id="range-2" value="30" min="5" max="30" step="1" onchange="changeLV()">
-</p>
-</div>
+</p></div>
 </td></tr>
 <tr><td rowspan="3" colspan="2">判定</td><td>Perfect</td><td>Great</td><td>Good</td></tr>
 <tr><td><input type="number" class="input_notes" id="input_perfectNotes" placeholder="666" /></td><td><input type="number" class="input_notes" id="input_greatNotes" placeholder="0" /></td><td><input type="number" class="input_notes" id="input_goodNotes" placeholder="0" /></td></tr>
@@ -84,13 +103,21 @@ Please wait.
 </div>
 
 <hr size="1">
+<h3>楽曲情報</h3>
+<div>
+<table border="1">
+<tr><td>曲名</td><td><span id="minfo_title"></span></td></tr>
+<tr><td>バンド</td><td><span id="minfo_band"></span></td></tr>
+<tr><td>時間</td><td><span id="minfo_time"></span></td></tr>
+</table>
+</div>
 
 
 <!-- admax -->
 <script src="https://adm.shinobi.jp/o/12b6a352cd779c5a2b6e8c33c40bbb90"></script>
 <!-- admax -->
 
-<h4>ver.3.0.3</h4>
+<h4>ver.4.0.0</h4>
 <OBJECT DATA="UPDATE.txt"TYPE="text/plain" WIDTH="100%" id="updHis"></OBJECT>
 
 </body>

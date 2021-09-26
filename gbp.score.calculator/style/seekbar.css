@@ -5,7 +5,7 @@
 
 .slidebar-multithumb {
   display: grid;
-  padding: 1rem;
+  padding: 0.125rem;
 }
 
 .slidebar-multithumb input[type="range"] {

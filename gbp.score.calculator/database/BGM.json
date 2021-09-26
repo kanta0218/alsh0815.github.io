@@ -1,249 +1,408 @@
 {
     "BGM":[
         {
-            "name":"HELL! or HELL? - SPECIAL Lv.30",
-            "id":"d9ece07b-add5-4869-9997-b75810301587",
-            "time":104,
-            "notes":1196,
-            "level":30
-        },
-        {
-            "name":"セツナトリップ - SPECIAL Lv.29",
-            "id":"f7e980eb-ddf5-42ca-94b9-7077f742981f",
-            "time":122,
-            "notes":1087,
-            "level":29
-        },
-        {
-            "name":"六兆年と一夜物語 - SPECIAL Lv.29",
-            "id":"57d80146-2fad-467e-8913-66fbce1808c4",
-            "time":96,
-            "notes":935,
-            "level":29
-        },
-        {
-            "name":"六兆年と一夜物語 - EXPERT Lv.29",
-            "id":"5e903d7b-37c9-4f3c-b2bf-80ef9bcddb3e",
-            "time":96,
-            "notes":895,
-            "level":29
-        },
-        {
-            "name":"Hey-day狂騒曲 (カプリチオ) - EXPERT Lv.28",
-            "id":"2472423d-dc6a-4dbe-802e-737142276bb5",
-            "time":106,
-            "notes":878,
-            "level":28
-        },
-        {
-            "name":"SENSENFUKOKU - EXPERT Lv.28",
-            "id":"5fbec421-e557-42ba-9d84-1df322a68908",
-            "time":98,
-            "notes":851,
-            "level":28
-        },
-        {
-            "name":"Re:birth day - EXPERT Lv.28",
-            "id":"26329a9c-13a1-4450-90d1-4757ae2e2239",
-            "time":120,
-            "notes":848,
-            "level":28
-        },
-        {
-            "name":"Opera of the wasteland - EXPERT Lv.28",
-            "id":"9ef53d78-32ac-4b6c-a9d9-a3d3c83b2448",
-            "time":106,
-            "notes":696,
-            "level":28
-        },
-        {
-            "name":"Ringing Bloom - EXPERT Lv.28",
-            "id":"1b8b7556-284e-4429-85f4-308c775598aa",
-            "time":117,
-            "notes":1094,
-            "level":28
-        },
-        {
-            "name":"[FULL] FIRE BIRD - EXPERT Lv.28",
-            "id":"30f95c49-a7d8-4fa4-8676-d1f0e4568f72",
-            "time":317,
-            "notes":2331,
-            "level":28
-        },
-        {
-            "name":"HELL! or HELL? - EXPERT Lv.28",
-            "id":"c1888da4-fb1a-4e75-9b8d-906f8401832d",
-            "time":104,
-            "notes":999,
-            "level":28
-        },
-        {
-            "name":"競宴Red×Violet - EXPERT Lv.28",
-            "id":"6cf5e925-59c9-449c-bed9-d87d7fb5c01b",
-            "time":106,
-            "notes":1002,
-            "level":28
-        },
-        {
-          "name": "God knows... - EXPERT Lv.28",
+          "name": "God knows...",
           "id": "53bb9ee8-c0d0-40aa-9e78-bdce69503521",
+          "band": 0,
           "time": 122,
-          "notes": 1081,
-          "level": 28
+          "notes": {
+            "expert": 1081
+          },
+          "level": {
+            "expert": 28
+          }
         },
         {
-          "name": "天ノ弱 - EXPERT Lv.28",
+            "name":"セツナトリップ",
+            "id":"f7e980eb-ddf5-42ca-94b9-7077f742981f",
+            "band": 0,
+            "time":122,
+            "notes": {
+              "expert": 1034,
+              "special": 1087
+            },
+            "level": {
+              "expert": 27,
+              "special": 29
+            }
+        },
+        {
+            "name":"Hey-day狂騒曲 (カプリチオ)",
+            "id":"2472423d-dc6a-4dbe-802e-737142276bb5",
+            "band": 1,
+            "time":106,
+            "notes": {
+              "expert": 878
+            },
+            "level": {
+              "expert": 28
+            }
+        },
+        {
+            "name":"[FULL] ON YOUR MARK",
+            "id":"0fb57886-a132-4a64-9ea1-e0e0dc333a05",
+            "band": 1,
+            "time":236,
+            "notes": {
+              "expert": 1895
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"SENSENFUKOKU",
+            "id":"5fbec421-e557-42ba-9d84-1df322a68908",
+            "band": 1,
+            "time":98,
+            "notes": {
+              "expert": 851
+            },
+            "level": {
+              "expert": 28
+            }
+        },
+        {
+          "name": "天ノ弱",
           "id": "8b3fbc3f-6ccf-497b-9b34-bbba6161347d",
+          "band": 1,
           "time": 106,
-          "notes": 967,
-          "level": 28
+          "notes": {
+            "expert": 967
+          },
+          "level": {
+            "expert": 28
+          }
         },
         {
-          "name": "Paradisus-Paradoxum - EXPERT Lv.28",
+            "name":"[FULL] きゅ〜まい＊flower",
+            "id":"050dc4ab-e425-4672-a0e7-29d61553ea9e",
+            "band": 2,
+            "time":214,
+            "notes": {
+              "expert": 1653
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"ゼッタイ宣言〜Recital〜",
+            "id":"72ddaf03-a929-4a7f-b0ff-0b7e0aa35dbe",
+            "band": 2,
+            "time":103,
+            "notes": {
+              "expert": 921,
+              "special": 954
+            },
+            "level": {
+              "expert": 27,
+              "special": 28
+            }
+        },
+        {
+            "name":"Determination Symphony",
+            "id":"7e7747a2-5fd5-406a-96b7-c0eb88e1d72f",
+            "band": 3,
+            "time":126,
+            "notes": {
+              "expert": 1054
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"FIRE BIRD",
+            "id":"5a5ab94f-2019-4504-882c-ebed1cee49c2",
+            "band": 3,
+            "time":125,
+            "notes": {
+              "expert": 935
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"[FULL] FIRE BIRD",
+            "id":"30f95c49-a7d8-4fa4-8676-d1f0e4568f72",
+            "band": 3,
+            "time":317,
+            "notes": {
+              "expert": 2331
+            },
+            "level": {
+              "expert": 28
+            }
+        },
+        {
+            "name":"Keep Heart",
+            "id":"37080625-ade5-44f7-adb9-633385bb1de8",
+            "band": 3,
+            "time":103,
+            "notes": {
+              "expert": 882
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"LOUDER",
+            "id":"4790ed92-9c7b-4562-b502-92254095a8fe",
+            "band": 3,
+            "time":103,
+            "notes": {
+              "expert": 828
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"ONENESS",
+            "id":"bb2c7c6b-0064-4772-baa6-64aa8910ad78",
+            "band": 3,
+            "time":115,
+            "notes": {
+              "expert": 746
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"Opera of the wasteland",
+            "id":"9ef53d78-32ac-4b6c-a9d9-a3d3c83b2448",
+            "band": 3,
+            "time":106,
+            "notes": {
+              "expert": 696
+            },
+            "level": {
+              "expert": 28
+            }
+        },
+        {
+            "name":"overtuRe",
+            "id":"13db3fe3-409d-411c-8a82-0e8cd8b1e5f2",
+            "band": 3,
+            "time":97,
+            "notes": {
+              "expert": 810
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+          "name": "Paradisus-Paradoxum",
           "id": "05669a13-184a-4011-b74a-76a1e9aa5a10",
+          "band": 3,
           "time": 90,
-          "notes": 813,
-          "level": 28
+          "notes": {
+            "expert": 813
+          },
+          "level": {
+            "expert": 28
+          }
         },
         {
-          "name": "シュガーソングとビターステップ - EXPERT Lv.28",
+            "name":"PASSIONATE ANTHEM",
+            "id":"4912c7ae-85a9-40fd-8e9c-11b6bca8d8c9",
+            "band": 3,
+            "time":93,
+            "notes": {
+              "expert": 815
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"Proud of oneself",
+            "id":"46fd7fbb-0687-4378-bf6d-a5e9ed722129",
+            "band": 3,
+            "time":93,
+            "notes": {
+              "expert": 723
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"Re:birth day",
+            "id":"26329a9c-13a1-4450-90d1-4757ae2e2239",
+            "band": 3,
+            "time":120,
+            "notes": {
+              "expert": 848
+            },
+            "level": {
+              "expert": 28
+            }
+        },
+        {
+            "name":"Ringing Bloom",
+            "id":"1b8b7556-284e-4429-85f4-308c775598aa",
+            "band": 3,
+            "time":117,
+            "notes": {
+              "expert": 1094
+            },
+            "level": {
+              "expert": 28
+            }
+        },
+        {
+            "name":"Sing Alive",
+            "id":"2f79ca0b-a716-4de9-81a6-e18eb44f3632",
+            "band": 3,
+            "time":97,
+            "notes": {
+              "expert": 769
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"Song I am.",
+            "id":"be92ee4b-2762-4f24-add9-7fbc323b7ad7",
+            "band": 3,
+            "time":99,
+            "notes": {
+              "expert": 882
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"ZEAL of proud",
+            "id":"684d1758-4683-45b0-962f-79d4b20a43e5",
+            "band": 3,
+            "time":98,
+            "notes": {
+              "expert": 857
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"六兆年と一夜物語",
+            "id":"57d80146-2fad-467e-8913-66fbce1808c4",
+            "band": 3,
+            "time":96,
+            "notes": {
+              "expert": 895,
+              "special": 935
+            },
+            "level": {
+              "expert": 29,
+              "special": 29
+            }
+        },
+        {
+            "name":"[FULL] えがお・シング・あ・ソング",
+            "id":"b6985abf-6a7f-45e5-9a36-9ad00f651de0",
+            "band": 4,
+            "time":243,
+            "notes": {
+              "expert": 1737
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"ゴーカ！ごーかい！？ファントムシーフ！",
+            "id":"4b9f8551-2668-4c65-b557-e1618e550fc8",
+            "band": 4,
+            "time":98,
+            "notes": {
+              "expert": 698
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+          "name": "シュガーソングとビターステップ",
           "id": "1ab9030a-6b40-4662-beaf-a737f143bab0",
           "time": 105,
-          "notes": 811,
-          "level": 28
+          "band": 4,
+          "notes": {
+            "expert": 811
+          },
+          "level": {
+            "expert": 28
+          }
         },
         {
-          "name": "劣等上等 - EXPERT Lv.28",
-          "id": "9c9bb568-4d39-4b2c-ae12-d1ab055b45cd",
-          "time": 133,
-          "notes": 1129,
-          "level": 28
-        },
-        {
-          "name": "SAVIOR OF SONG - EXPERT Lv.28",
-          "id": "e32950a7-b1a0-4d08-b99b-06e0d4869071",
-          "time": 85,
-          "notes": 772,
-          "level": 28
-        },
-        {
-            "name":"[FULL] ON YOUR MARK - EXPERT Lv.27",
-            "id":"0fb57886-a132-4a64-9ea1-e0e0dc333a05",
-            "time":236,
-            "notes":1895,
-            "level":27
-        },
-        {
-            "name":"ゼッタイ宣言〜Recital〜 - EXPERT Lv.27",
-            "id":"72ddaf03-a929-4a7f-b0ff-0b7e0aa35dbe",
-            "time":103,
-            "notes":921,
-            "level":27
-        },
-        {
-            "name":"[FULL] きゅ〜まい＊flower - EXPERT Lv.27",
-            "id":"050dc4ab-e425-4672-a0e7-29d61553ea9e",
-            "time":214,
-            "notes":1653,
-            "level":27
-        },
-        {
-            "name":"LOUDER - EXPERT Lv.27",
-            "id":"4790ed92-9c7b-4562-b502-92254095a8fe",
-            "time":103,
-            "notes":828,
-            "level":27
-        },
-        {
-            "name":"Determination Symphony - EXPERT Lv.27",
-            "id":"7e7747a2-5fd5-406a-96b7-c0eb88e1d72f",
-            "time":126,
-            "notes":1054,
-            "level":27
-        },
-        {
-            "name":"ONENESS - EXPERT Lv.27",
-            "id":"bb2c7c6b-0064-4772-baa6-64aa8910ad78",
-            "time":115,
-            "notes":746,
-            "level":27
-        },
-        {
-            "name":"PASSIONATE ANTHEM - EXPERT Lv.27",
-            "id":"4912c7ae-85a9-40fd-8e9c-11b6bca8d8c9",
-            "time":93,
-            "notes":815,
-            "level":27
-        },
-        {
-            "name":"FIRE BIRD - EXPERT Lv.27",
-            "id":"5a5ab94f-2019-4504-882c-ebed1cee49c2",
-            "time":125,
-            "notes":935,
-            "level":27
-        },
-        {
-            "name":"Song I am. - EXPERT Lv.27",
-            "id":"be92ee4b-2762-4f24-add9-7fbc323b7ad7",
-            "time":99,
-            "notes":882,
-            "level":27
-        },
-        {
-            "name":"ZEAL of proud - EXPERT Lv.27",
-            "id":"684d1758-4683-45b0-962f-79d4b20a43e5",
-            "time":98,
-            "notes":857,
-            "level":27
-        },
-        {
-            "name":"Keep Heart - EXPERT Lv.27",
-            "id":"37080625-ade5-44f7-adb9-633385bb1de8",
-            "time":103,
-            "notes":882,
-            "level":27
-        },
-        {
-            "name":"Proud of oneself - EXPERT Lv.27",
-            "id":"46fd7fbb-0687-4378-bf6d-a5e9ed722129",
-            "time":93,
-            "notes":723,
-            "level":27
-        },
-        {
-            "name":"overtuRe - EXPERT Lv.27",
-            "id":"13db3fe3-409d-411c-8a82-0e8cd8b1e5f2",
-            "time":97,
-            "notes":810,
-            "level":27
-        },
-        {
-            "name":"Sing Alive - EXPERT Lv.27",
-            "id":"2f79ca0b-a716-4de9-81a6-e18eb44f3632",
-            "time":97,
-            "notes":769,
-            "level":27
-        },
-        {
-            "name":"ゴーカ！ごーかい！？ファントムシーフ！ - EXPERT Lv.27",
-            "id":"4b9f8551-2668-4c65-b557-e1618e550fc8",
-            "time":98,
-            "notes":698,
-            "level":27
-        },
-        {
-            "name":"[FULL] えがお・シング・あ・ソング - EXPERT Lv.27",
-            "id":"b6985abf-6a7f-45e5-9a36-9ad00f651de0",
-            "time":243,
-            "notes":1737,
-            "level":27
-        },
-        {
-            "name":"flame of hope - EXPERT Lv.27",
+            "name":"flame of hope",
             "id":"81de2e98-a74b-45d2-b28c-f0db0ed080dd",
+            "band": 5,
             "time":108,
-            "notes":969,
-            "level":27
+            "notes": {
+              "expert": 969
+            },
+            "level": {
+              "expert": 27
+            }
+        },
+        {
+            "name":"HELL! or HELL?",
+            "id":"d9ece07b-add5-4869-9997-b75810301587",
+            "band": 6,
+            "time":104,
+            "notes": {
+              "expert": 999,
+              "special": 1196
+            },
+            "level": {
+              "expert": 28,
+              "special": 30
+            }
+        },
+        {
+          "name": "劣等上等",
+          "id": "9c9bb568-4d39-4b2c-ae12-d1ab055b45cd",
+          "band": 6,
+          "time": 133,
+          "notes": {
+            "expert": 1129
+          },
+          "level": {
+            "expert": 28
+          }
+        },
+        {
+          "name": "SAVIOR OF SONG",
+          "id": "e32950a7-b1a0-4d08-b99b-06e0d4869071",
+          "band": 99,
+          "time": 85,
+          "notes": {
+            "expert": 772
+          },
+          "level": {
+            "expert": 28
+          }
+        },
+        {
+            "name":"競宴Red×Violet",
+            "id":"6cf5e925-59c9-449c-bed9-d87d7fb5c01b",
+            "band": 99,
+            "time":106,
+            "notes": {
+              "expert": 1002
+            },
+            "level": {
+              "expert": 28
+            }
         }
     ]
 }
