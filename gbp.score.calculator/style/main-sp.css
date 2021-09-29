@@ -61,4 +61,45 @@ button {
   background-color: #ddd;
 }
 
+
+.sortDF_Label {
+  border: solid 1px gray;
+  background: linear-gradient(#eee, #ddd);
+  color: #555;
+  font-size: 0.8em;
+  padding: 6px;
+  border-radius: 5px;
+  margin: 1px;
+  box-shadow: 1px 1px;
+  font-family: serif;
+}
+input[name='sortDF'] {
+  display: none;
+}
+#sortDF_Easy:checked + label {
+  background: #003AFF;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortDF_Normal:checked + label {
+  background: #0CFF00;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortDF_Hard:checked + label {
+  background: #FFDA00;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortDF_Expert:checked + label {
+  background: #FF531A;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortDF_Special:checked + label {
+  background: #7300FF;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+
 }

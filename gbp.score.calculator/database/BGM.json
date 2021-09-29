@@ -6,10 +6,18 @@
           "band": 0,
           "time": 122,
           "notes": {
-            "expert": 1081
+            "easy": 204,
+            "normal": 378,
+            "hard": 631,
+            "expert": 1081,
+            "special": 923
           },
           "level": {
-            "expert": 28
+            "easy": 10,
+            "normal": 15,
+            "hard": 21,
+            "expert": 28,
+            "special": 26
           }
         },
         {
@@ -18,10 +26,16 @@
             "band": 0,
             "time":122,
             "notes": {
+              "easy": 188,
+              "normal": 304,
+              "hard": 554,
               "expert": 1034,
               "special": 1087
             },
             "level": {
+              "easy": 9,
+              "normal": 15,
+              "hard": 20,
               "expert": 27,
               "special": 29
             }

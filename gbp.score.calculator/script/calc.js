@@ -58,6 +58,7 @@ function calc () {
   document.getElementById('waiting').style.display = 'block';
   var bgm = document.getElementById('input_bgm').value;
   var dif = ['easy','normal','hard','expert','special'];
+  var band = ["Poppin'Party","Afterglow","Pastel✾Palettes","Roselia","ハロー、ハッピーワールド！","Morfonica","RAISE A SUILEN"];
   var n = parseInt($("input[name='sortDF']:checked").val());
   $.getJSON('database/BGM.json', function(data) {
     for (i = 0; i < data.BGM.length; i++) {
@@ -70,6 +71,15 @@ function calc () {
         var compPower_theo = 300000; // 理論値バンド総合力
         var notePsec = notes / time;
         $("#output_nps").html(notePsec.toFixed(1));
+        
+        $("#minfo_title").html(data.BGM[i].name);
+        if (data.BGM[i].band == 99) {
+          $("#minfo_band").html('その他');
+        } else {
+          $("#minfo_band").html(band[data.BGM[i].band]);
+        }
+        var fmdTime = Math.floor(time / 60) + '分' + (time % 60) + '秒';
+        $("#minfo_time").html(fmdTime);
         
         var perfectNotes = parseInt(document.getElementById('input_perfectNotes').value);
         var greatNotes = parseInt(document.getElementById('input_greatNotes').value);

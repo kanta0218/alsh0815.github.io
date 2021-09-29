@@ -1,11 +1,22 @@
+・ver.4.1.0
+  > デザインを一部変更
+  > 楽曲を追加
+    > God knows... - EASY
+    > God knows... - NORMAL
+    > God knows... - HARD
+    > God knows... - SPECIAL
+    > セツナトリップ - EASY
+    > セツナトリップ - NORMAL
+    > セツナトリップ - HARD
+
 ・ver.4.0.0
   > 楽曲ソート機能を追加
     > 難易度ソート
   > データベースを変更
   > 楽曲情報表示欄を追加
   > 楽曲を追加
-    > セツナトリップ - EXPERT Lv.27
-    > ゼッタイ宣言〜Recital〜 - SPECIAL Lv.28
+    > セツナトリップ - EXPERT
+    > ゼッタイ宣言〜Recital〜 - SPECIAL
 
 ・ver.3.0.3
   > 軽微な修正
@@ -20,9 +31,9 @@
 ・ver.3.0.0
   > スコアの計算方式を変更
   > 楽曲を追加
-    > ゴーカ！ごーかい！？ファントムシーフ！ - EXPERT Lv.27
-    > [FULL] えがお・シング・あ・ソング - EXPERT Lv.27
-    > flame of hope - EXPERT Lv.27
+    > ゴーカ！ごーかい！？ファントムシーフ！ - EXPERT
+    > [FULL] えがお・シング・あ・ソング - EXPERT
+    > flame of hope - EXPERT
 
 ・ver.2.5.1
   > 広告表示を最適化
@@ -36,33 +47,33 @@
 
 ・ver.2.4.0
   > 楽曲を追加
-    > Determination Symphony - EXPERT Lv.27
-    > ONENESS - EXPERT Lv.27
-    > PASSIONATE ANTHEM - EXPERT Lv.27
-    > FIRE BIRD - EXPERT Lv.27
-    > Song I am. - EXPERT Lv.27
-    > ZEAL of proud - EXPERT Lv.27
-    > Keep Heart - EXPERT Lv.27
-    > Proud of oneself - EXPERT Lv.27
-    > overtuRe - EXPERT Lv.27
-    > Sing Alive - EXPERT Lv.27
+    > Determination Symphony - EXPERT
+    > ONENESS - EXPERT
+    > PASSIONATE ANTHEM - EXPERT
+    > FIRE BIRD - EXPERT
+    > Song I am. - EXPERT
+    > ZEAL of proud - EXPERT
+    > Keep Heart - EXPERT
+    > Proud of oneself - EXPERT
+    > overtuRe - EXPERT
+    > Sing Alive - EXPERT
 
 ・ver.2.3.1
   > Lv.30の楽曲が表示されない問題を修正
 
 ・ver.2.3.0
   > 楽曲を追加
-    > HELL! or HELL? - SPECIAL Lv.30
-    > HELL! or HELL? - EXPERT Lv.28
-    > [FULL] きゅ〜まい＊flower - EXPERT Lv.27
-    > LOUDER - EXPERT Lv.27
+    > HELL! or HELL? - SPECIAL
+    > HELL! or HELL? - EXPERT
+    > [FULL] きゅ〜まい＊flower - EXPERT
+    > LOUDER - EXPERT
   > 一部データベースを変更
 
 ・ver.2.2.0
   > 楽曲を追加
-    > 競宴Red×Violet - EXPERT Lv.28
-    > [FULL] ON YOUR MARK - EXPERT Lv.27
-    > ゼッタイ宣言〜Recital〜 - EXPERT Lv.27
+    > 競宴Red×Violet - EXPERT
+    > [FULL] ON YOUR MARK - EXPERT
+    > ゼッタイ宣言〜Recital〜 - EXPERT
 
 ・ver.2.1.0
   > 楽曲絞り込み(レベル指定)機能を追加
