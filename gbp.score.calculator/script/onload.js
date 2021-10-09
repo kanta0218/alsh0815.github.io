@@ -181,7 +181,11 @@ function loadBGM(sortType) {
         } else if (diff=='4') {
           if (data.BGM[i].notes.special!=undefined) {
             if (minLv <= data.BGM[i].level.special && data.BGM[i].level.special <= maxLv) {
-              x.name = data.BGM[i].name + ' - Lv.' + data.BGM[i].level.special;
+              var sub = '';
+              if (data.BGM[i].sheet != undefined && data.BGM[i].sheet.special != undefined) {
+                sub = '[シート分析対応]';
+              }
+              x.name = data.BGM[i].name + ' - Lv.' + data.BGM[i].level.special + ' ' + sub;
               x.notes = data.BGM[i].notes.special;
               x.level = data.BGM[i].level.special;
               list.push(x);

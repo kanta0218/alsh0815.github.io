@@ -86,6 +86,16 @@ function calc () {
         var notePsec = notes / time;
         $("#output_nps").html(notePsec.toFixed(1));
         
+        // シート解析
+        if (data.BGM[i].sheet!=undefined && data.BGM[i].sheet[dif[n]]) {
+          $.getJSON('database/'+data.BGM[i].sheet[dif[n]], function(sheet) {
+            console.log('【シート解析】');
+            console.log('ノーツ数: '+sheet.length+'notes');
+          });
+        }
+        
+        
+        
         $("#minfo_title").html(data.BGM[i].name);
         if (data.BGM[i].band == 99) {
           $("#minfo_band").html('その他');
