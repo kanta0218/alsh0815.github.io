@@ -324,6 +324,7 @@
               "special": 935
             },
             "sheet": {
+              "expert": "sheet/116ex.json",
               "special": "sheet/116sp.json"
             },
             "level": {

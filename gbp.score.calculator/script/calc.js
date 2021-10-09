@@ -67,6 +67,7 @@ function setAP() {
   }
 }
 
+
 function calc () {
   document.getElementById('waiting').style.display = 'block';
   Toast.error.dismiss();
