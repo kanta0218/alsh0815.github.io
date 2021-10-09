@@ -1,11 +1,11 @@
 :root {
   --bg: rgb(200, 200, 200);
-  --bar: rgb(125, 230, 255);
+  --bar: rgb(100, 200, 255);
 }
 
 .slidebar-multithumb {
   display: grid;
-  padding: 0.125rem;
+  padding: 0.0625rem;
 }
 
 .slidebar-multithumb input[type="range"] {
@@ -27,6 +27,7 @@
   -webkit-appearance: none;
   width: 0.8rem;
   height: 1.5rem;
+  border-radius: 3px;
 }
 
 /* 最初のつまみを上にする(順番をわかりやすくするため) */
@@ -44,12 +45,27 @@
 }
 
 /* それぞれのつまみの設定。box-shadowでつまみの左側を埋める色を設定できる。 */
-.thumb-1::-webkit-slider-thumb {
-  background: rgb(255, 100, 100);
-  box-shadow: -100vw 0 0 100vw var(--bg);
+
+@media screen and (min-width: 767px) {
+  .thumb-1::-webkit-slider-thumb {
+    background: rgb(255, 100, 100);
+    box-shadow: -102vw 0 0 100vw var(--bg);
+  }
+
+  .thumb-2::-webkit-slider-thumb {
+    background: rgb(100, 100, 255);
+    box-shadow: -99vw 0 0 100vw var(--bar);
+  }
 }
 
-.thumb-2::-webkit-slider-thumb {
-  background: rgb(100, 100, 255);
-  box-shadow: -100vw 0 0 100vw var(--bar);
+@media screen and (max-width: 766px) {
+  .thumb-1::-webkit-slider-thumb {
+    background: rgb(255, 100, 100);
+    box-shadow: -104.5vw 0 0 100vw var(--bg);
+  }
+
+  .thumb-2::-webkit-slider-thumb {
+    background: rgb(100, 100, 255);
+    box-shadow: -98.5vw 0 0 100vw var(--bar);
+  }
 }

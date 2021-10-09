@@ -10,6 +10,7 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <title>ガルパ スコア計算サイト</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/toast.js?p=(new Date()).getTime()"></script>
     <script src="script/onload.js?p=(new Date()).getTime()"></script>
     <script src="script/calc.js?p=(new Date()).getTime()"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
@@ -28,6 +29,9 @@ Please wait.
 </div>
 
 <div align="center">
+  
+  <a href="#ErrorMsg"></a>
+  <div id="ErrorMsg"></div>
 
 <table border="1" id="input_table">
 <tr><td colspan="2">総合力</td><td colspan="3"><input type="number" id="input_CompPower" placeholder="280000" /></td></tr>
@@ -39,7 +43,7 @@ Please wait.
   <option value="title-down">タイトル - 降順</option>
 </select><br>
 
-<div>
+<br><div>
   <input type="radio" id="sortDF_Easy" name="sortDF" value="0" onclick="sortBGM()">
 <label for="sortDF_Easy" class="sortDF_Label">Easy</label>
   <input type="radio" id="sortDF_Normal" name="sortDF" value="1" onclick="sortBGM()">
@@ -50,6 +54,27 @@ Please wait.
 <label for="sortDF_Expert" class="sortDF_Label">Expert</label>
   <input type="radio" id="sortDF_Special" name="sortDF" value="4" onclick="sortBGM()">
 <label for="sortDF_Special" class="sortDF_Label">Special</label>
+</div><br>
+
+<br><div>
+  <input type="radio" id="sortBD_All" name="sortBD" value="100" onclick="sortBGM()" checked>
+<label for="sortBD_All" class="sortBD_Label">All</label>
+  <input type="radio" id="sortBD_PoppinParty" name="sortBD" value="0" onclick="sortBGM()">
+<label for="sortBD_PoppinParty" class="sortBD_Label">Poppin'Party</label>
+  <input type="radio" id="sortBD_Afterglow" name="sortBD" value="1" onclick="sortBGM()">
+<label for="sortBD_Afterglow" class="sortBD_Label">Afterglow</label>
+  <input type="radio" id="sortBD_PastelPalettes" name="sortBD" value="2" onclick="sortBGM()">
+<label for="sortBD_PastelPalettes" class="sortBD_Label">Pastel✾Palettes</label><br><br>
+  <input type="radio" id="sortBD_Roselia" name="sortBD" value="3" onclick="sortBGM()">
+<label for="sortBD_Roselia" class="sortBD_Label">Roselia</label>
+  <input type="radio" id="sortBD_HelloHappyWorld" name="sortBD" value="4" onclick="sortBGM()">
+<label for="sortBD_HelloHappyWorld" class="sortBD_Label">ハロー、ハッピーワールド！</label>
+  <input type="radio" id="sortBD_Morfonica" name="sortBD" value="5" onclick="sortBGM()">
+<label for="sortBD_Morfonica" class="sortBD_Label">Morfonica</label><br><br>
+  <input type="radio" id="sortBD_RAISE_A_SUILEN" name="sortBD" value="6" onclick="sortBGM()">
+<label for="sortBD_RAISE_A_SUILEN" class="sortBD_Label">RAISE A SUILEN</label>
+  <input type="radio" id="sortBD_etc" name="sortBD" value="99" onclick="sortBGM()">
+<label for="sortBD_etc" class="sortBD_Label">その他</label>
 </div>
 
 <div>
@@ -72,6 +97,10 @@ Please wait.
 <tr><td colspan="2"></td><td colspan="3"><button onclick="calc()">計算</button></td></tr>
 </table>
 </div>
+
+<!-- admax -->
+<script src="https://adm.shinobi.jp/o/12b6a352cd779c5a2b6e8c33c40bbb90"></script>
+<!-- admax -->
 
 <hr size="1">
 <h3>計算結果</h3>
@@ -107,16 +136,13 @@ Please wait.
 </table>
 </div>
 
+
 <a href="https://forms.gle/kWLsjjz8RjFcuXbaA" name="Forms">
   利用者アンケート / ご意見・ご要望
 </a>
 
 
-<!-- admax -->
-<script src="https://adm.shinobi.jp/o/12b6a352cd779c5a2b6e8c33c40bbb90"></script>
-<!-- admax -->
-
-<h4>ver.4.1.1</h4>
+<h4>ver.4.2.0</h4>
 <OBJECT DATA="UPDATE.txt"TYPE="text/plain" WIDTH="100%" id="updHis"></OBJECT>
 
 </body>

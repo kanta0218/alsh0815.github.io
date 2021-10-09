@@ -46,10 +46,18 @@
             "band": 1,
             "time":106,
             "notes": {
-              "expert": 878
+              "easy": 184,
+              "normal": 314,
+              "hard": 542,
+              "expert": 878,
+              "special": 762
             },
             "level": {
-              "expert": 28
+              "easy": 10,
+              "normal": 15,
+              "hard": 20,
+              "expert": 28,
+              "special": 26
             }
         },
         {

@@ -22,6 +22,19 @@ a {
   font-size: 25px;
 }
 
+
+#ErrorMsg {
+  display: none;
+  background-color: #FFDCCB;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 3px;
+  color: #E50000;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+
 #input_table {
   max-width: 98%;
 }
@@ -36,16 +49,21 @@ a {
 
 input {
   background-color: #eee;
-  color: #333;
+  color: black;
   font-family: serif;
   padding: 5px;
   margin: 3px;
   border-radius: 5px;
 }
 
+input:disabled {
+  background-color: #999;
+  color: white;
+}
+
 select {
   background-color: #eee;
-  color: #333;
+  color: black;
   font-family: serif;
   padding: 5px;
   margin: 3px;
@@ -54,7 +72,7 @@ select {
 
 button {
   background-color: #eee;
-  color: #333;
+  color: black;
   font-family: serif;
   padding: 7px;
   margin: 3px;
@@ -66,9 +84,10 @@ button {
 }
 
 
+/* 難易度ソート */
 .sortDF_Label {
   border: solid 1px gray;
-  background: linear-gradient(#eee, #ddd);
+  background: linear-gradient(#fff, #ddd);
   color: #555;
   font-size: 0.8em;
   padding: 6px;
@@ -102,6 +121,68 @@ input[name='sortDF'] {
 }
 #sortDF_Special:checked + label {
   background: #7300FF;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+
+/* バンド別ソート */
+.sortBD_Label {
+  border: solid 1px gray;
+  background: linear-gradient(#fff, #ddd);
+  color: #555;
+  font-size: 0.8em;
+  padding: 6px;
+  border-radius: 5px;
+  margin: 1px;
+  box-shadow: 1px 1px;
+  font-family: serif;
+}
+input[name='sortBD'] {
+  display: none;
+}
+#sortBD_All:checked + label {
+  background: #FF7D52;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortBD_PoppinParty:checked + label {
+  background: deeppink;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortBD_Afterglow:checked + label {
+  background: red;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortBD_PastelPalettes:checked + label {
+  background: #00ff00;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortBD_Roselia:checked + label {
+  background: #3E29FF;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortBD_HelloHappyWorld:checked + label {
+  background: #FFE100;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortBD_Morfonica:checked + label {
+  background: #00ffff;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortBD_RAISE_A_SUILEN:checked + label {
+  background: #40F4CA;
+  color: white;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+#sortBD_etc:checked + label {
+  background: #0089FF;
   color: white;
   box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
 }

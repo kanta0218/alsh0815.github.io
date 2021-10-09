@@ -37,6 +37,10 @@ function getSkillTime(time) {
 
 function setAP() {
   var tf = document.getElementById('set_ap').checked;
+  var maxCombo = document.getElementById('input_maxCombo');
+  var perfNotes = document.getElementById('input_perfectNotes');
+  var greatNotes = document.getElementById('input_greatNotes');
+  var goodNotes = document.getElementById('input_goodNotes');
   if (tf==true) {
     var bgm = document.getElementById('input_bgm').value;
     var dif = ['easy','normal','hard','expert','special'];
@@ -44,18 +48,28 @@ function setAP() {
     $.getJSON('database/BGM.json', (data) => {
       for (i = 0; i < data.BGM.length; i++) {
         if (bgm == data.BGM[i].id) {
-          document.getElementById('input_maxCombo').value = data.BGM[i].notes[dif[n]];
-          document.getElementById('input_perfectNotes').value = data.BGM[i].notes[dif[n]];
-          document.getElementById('input_greatNotes').value = '0';
-          document.getElementById('input_goodNotes').value = '0';
+          maxCombo.value = data.BGM[i].notes[dif[n]];
+          perfNotes.value = data.BGM[i].notes[dif[n]];
+          greatNotes.value = '0';
+          goodNotes.value = '0';
         }
       }
     });
+    maxCombo.disabled = true;
+    perfNotes.disabled = true;
+    greatNotes.disabled = true;
+    goodNotes.disabled = true;
+  } else {
+    maxCombo.disabled = false;
+    perfNotes.disabled = false;
+    greatNotes.disabled = false;
+    goodNotes.disabled = false;
   }
 }
 
 function calc () {
   document.getElementById('waiting').style.display = 'block';
+  Toast.error.dismiss();
   var bgm = document.getElementById('input_bgm').value;
   var dif = ['easy','normal','hard','expert','special'];
   var band = ["Poppin'Party","Afterglow","Pastel✾Palettes","Roselia","ハロー、ハッピーワールド！","Morfonica","RAISE A SUILEN"];
@@ -85,6 +99,11 @@ function calc () {
         var greatNotes = parseInt(document.getElementById('input_greatNotes').value);
         var goodNotes = parseInt(document.getElementById('input_goodNotes').value);
         var missNotes = notes - (perfectNotes + greatNotes + goodNotes);
+        
+        if (notes<(perfectNotes+greatNotes+goodNotes)) {
+          Toast.error.show('ノーツ数が最大ノーツ数('+notes+'notes)を超えています！');
+        }
+        
         var perfectNP = perfectNotes / notes;
         $("#output_perfectNP").html(perfectNP.toFixed(3));
         var greatNP = greatNotes / notes;
