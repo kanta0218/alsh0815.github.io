@@ -1,26 +1,26 @@
 [
-				{
-								"bar": 1,
-								"tick": 3.0,
-								"lane": 2,
-								"type": "normal"
-				},
-				{
-								"bar": 1,
-								"tick": 3.5,
-								"lane": 7,
-								"type": "normal"
-				},
-				{
-								"bar": 2,
-								"tick": 0,
-								"lane": 3,
-								"type": "flick"
-				},
-				{
-								"bar": 2,
-								"tick": 0,
-								"lane": 5,
-								"type": "normal"
-				}
-]
+    {
+        "bar": 1,
+        "tick": 3,
+        "lane": 2,
+        "type": "normal"
+    },
+    {
+        "bar": 1,
+        "tick": 3.5,
+        "lane": 7,
+        "type": "normal"
+    },
+    {
+        "bar": 2,
+        "tick": 0,
+        "lane": 3,
+        "type": "flick"
+    },
+    {
+        "bar": 2,
+        "tick": 0,
+        "lane": 5,
+        "type": "normal"
+    }
+] 
